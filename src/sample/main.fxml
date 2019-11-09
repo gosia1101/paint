@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+   <children>
+      <TabPane layoutX="2.0" prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Linia" >
+                <fx:include source="Linia.fxml"/>
+            </Tab>
+          <Tab text="Koło" >
+              <fx:include source="Kolo.fxml"/>
+          </Tab>
+            <Tab text="Kwadrat" >
+                <fx:include source="Kwadrat.fxml"/>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

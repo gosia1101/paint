@@ -18,7 +18,7 @@ import javafx.scene.shape.Line;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class Linia implements Initializable {
     public TextField x1;
     public TextField x2;
     public TextField y1;
@@ -28,12 +28,13 @@ public class Controller implements Initializable {
     public AnchorPane pane;
     Line line = new Line();
 
-    Canvas canvas = new Canvas(900, 480);
+   // Canvas canvas = new Canvas(900, 480);
 
     double orgX1, orgX2, orgY1, orgY2;
     double orgSceneX, orgSceneY;
     double orgTranslateX, orgTranslateY;
     int mode = 0;
+
 
 
     @Override

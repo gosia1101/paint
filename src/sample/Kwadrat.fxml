@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" onDragDetected="#event" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Kwadrat">
+
+    <Button fx:id="kwadratButon" layoutX="251.0" layoutY="77.0" mnemonicParsing="false" onAction="#rysujKwadrat" text="rysuj kwadrat" />
+    <TextField layoutX="56.0" layoutY="28.0" fx:id="x1" />
+    <TextField fx:id="y1" layoutX="56.0" layoutY="104.0" />
+    <TextField fx:id="height" layoutX="56.0" layoutY="64.0" />
+    <TextField fx:id="width" layoutX="56.0" layoutY="141.0" />
+    <Label layoutX="14.0" layoutY="32.0" text="x1" />
+    <Label layoutX="12.0" layoutY="68.0" text="h" />
+    <Label layoutX="12.0" layoutY="108.0" text="y1" />
+    <Label layoutX="12.0" layoutY="146.0" text="w" />
+    <Button fx:id="kwadratMouse" layoutX="251.0" layoutY="151.0" mnemonicParsing="false" onAction="#kwadratByMouse" text="rysuj kwadrat myszka" />
+
+</AnchorPane>
