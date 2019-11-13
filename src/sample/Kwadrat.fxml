@@ -17,5 +17,6 @@
     <Label layoutX="12.0" layoutY="108.0" text="y1" />
     <Label layoutX="12.0" layoutY="146.0" text="w" />
     <Button fx:id="kwadratMouse" layoutX="251.0" layoutY="151.0" mnemonicParsing="false" onAction="#kwadratByMouse" text="rysuj kwadrat myszka" />
+   <Button fx:id="clear" layoutX="366.0" layoutY="77.0" mnemonicParsing="false" text="wyczysc" />
 
 </AnchorPane>

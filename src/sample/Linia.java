@@ -1,18 +1,11 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
+
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 import java.net.URL;
@@ -26,6 +19,7 @@ public class Linia implements Initializable {
     public Button liniaButon;
     public Button lineMouse;
     public AnchorPane pane;
+    public Button clear;
     Line line = new Line();
 
    // Canvas canvas = new Canvas(900, 480);
@@ -43,6 +37,7 @@ public class Linia implements Initializable {
     }
 
     public void rysujLinie() {
+        pane.getChildren().remove(line);
         line.setStartX(Double.parseDouble(x1.getText()));
         line.setStartY(Double.parseDouble(y1.getText()));
         line.setEndX(Double.parseDouble(x2.getText()));
@@ -114,6 +109,13 @@ public class Linia implements Initializable {
 
         pane.setOnMouseReleased(event -> {
             mode = 0;
+        });
+        clear.setOnMouseClicked(event -> {
+            pane.getChildren().remove(line);
+            x1.setText(Integer.toString(0));
+            y1.setText(Integer.toString(0));
+            x2.setText(Integer.toString(0));
+            y2.setText(Integer.toString(0));
         });
     }
 

@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +19,7 @@ public class Kolo implements Initializable {
     public TextField r;
     public Button circleButton;
     public Button circleMouse;
+    public Button clear;
     public AnchorPane pane;
     Circle circle = new Circle();
 
@@ -39,7 +39,7 @@ public class Kolo implements Initializable {
 
 
     public void rysujKolo() {
-        //    pane.getChildren().remove(circle);
+        pane.getChildren().remove(circle);
         circle.setCenterX(Double.parseDouble(x1.getText()));
         circle.setCenterY(Double.parseDouble(y1.getText()));
         circle.setRadius(Double.parseDouble(r.getText()));
@@ -53,7 +53,7 @@ public class Kolo implements Initializable {
     public void event() {
 
 
-        System.out.println("+++++++");
+
 /////////////////////////////////////////////////////////////////////// kolo ////////////////
         //zmiana kształtu i położenia
         circle.setOnMousePressed(event -> {
@@ -91,6 +91,7 @@ public class Kolo implements Initializable {
 
         if (mode == 2) {
             pane.setOnMouseClicked(event -> {
+              //  pane.getChildren().remove(circle);
                 if (pointC1 == null) {
                     pointC1 = new Point2D(event.getX(), event.getY());
                 } else if (pointC2 == null) {
@@ -109,7 +110,15 @@ public class Kolo implements Initializable {
                 }
             });
         }
-
+        pane.setOnMouseReleased(event -> {
+            mode = 0;
+        });
+        clear.setOnMouseClicked(event -> {
+            pane.getChildren().remove(circle);
+            x1.setText(Integer.toString(0));
+            y1.setText(Integer.toString(0));
+            r.setText(Integer.toString(0));
+        });
 
     }
 }

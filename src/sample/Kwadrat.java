@@ -1,12 +1,10 @@
 package sample;
 
 import javafx.fxml.Initializable;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
@@ -21,9 +19,9 @@ public class Kwadrat implements Initializable {
     public Button kwadratButon;
     public Button kwadratMouse;
     public AnchorPane pane;
-    Line line = new Line();
+    public Button clear;
 
-    Canvas canvas = new Canvas(900, 480);
+
 
     double orgX1, orgX2, orgY1, orgY2;
     double orgSceneX, orgSceneY;
@@ -36,7 +34,7 @@ public class Kwadrat implements Initializable {
     }
 
     public void rysujKwadrat(){
-      //  pane.getChildren().remove(rectangle);
+        pane.getChildren().remove(rectangle);
         rectangle.setX(Double.parseDouble(x1.getText()));
         rectangle.setY(Double.parseDouble(y1.getText()));
         rectangle.setHeight(Double.parseDouble(height.getText()));
@@ -83,7 +81,7 @@ public class Kwadrat implements Initializable {
             }
         });
 
-        if (mode == 1) {
+        if (mode == 3) {
             pane.setOnMousePressed(event -> {
                 orgSceneX = event.getSceneX();
                 orgSceneY = event.getSceneY();
@@ -96,9 +94,19 @@ public class Kwadrat implements Initializable {
                 setRectangleEnd(event.getSceneX(), event.getSceneY(), rectangle);
             });
         }
+        pane.setOnMouseReleased(event -> {
+            mode = 0;
+        });
+        clear.setOnMouseClicked(event -> {
+            pane.getChildren().remove(rectangle);
+            x1.setText(Integer.toString(0));
+            y1.setText(Integer.toString(0));
+            height.setText(Integer.toString(0));
+            width.setText(Integer.toString(0));
+        });
     }
     public void kwadratByMouse() {
-        mode = 1;
+        mode = 3;
     }
 
     void setRectangleStart(double x, double y, Rectangle rectangle) {

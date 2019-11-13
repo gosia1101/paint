@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="pane2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Kolory">
+   <children>
+      <Slider fx:id="Red" layoutX="51.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="Green" layoutX="98.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="Blue" layoutX="143.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="Cyan" layoutX="358.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="Magenta" layoutX="403.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="Yellow" layoutX="445.0" layoutY="21.0" orientation="VERTICAL" />
+      <Slider fx:id="KBlack" layoutX="488.0" layoutY="21.0" orientation="VERTICAL" />
+      <TextField fx:id="RedText" layoutX="29.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="GreenText" layoutX="83.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="BlueText" layoutX="135.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="CyanText" layoutX="336.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="MagentaText" layoutX="388.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="YellowText" layoutX="437.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="KBlackText" layoutX="488.0" layoutY="175.0" prefHeight="25.0" prefWidth="45.0" />
+      <Label layoutX="47.0" layoutY="200.0" text="R" />
+      <Label layoutX="101.0" layoutY="200.0" text="G" />
+      <Label layoutX="154.0" layoutY="200.0" text="B" />
+      <Label layoutX="355.0" layoutY="200.0" text="C" />
+      <Label layoutX="406.0" layoutY="200.0" text="M" />
+      <Label layoutX="455.0" layoutY="200.0" text="Y" />
+      <Label layoutX="507.0" layoutY="200.0" text="K" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="153.0" layoutX="193.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+   </children>
+</AnchorPane>

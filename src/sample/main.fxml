@@ -18,6 +18,9 @@
             <Tab text="Kwadrat" >
                 <fx:include source="Kwadrat.fxml"/>
             </Tab>
+            <Tab text="Kolory" >
+                <fx:include source="Kolory.fxml"/>
+            </Tab>
         </tabs>
       </TabPane>
    </children>
